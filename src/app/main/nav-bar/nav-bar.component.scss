@@ -1,0 +1,40 @@
+.navbar-wrapper {
+    display: flex;
+    justify-content: center;
+    .navbar-box {
+        display: flex;
+        justify-content: space-between;
+        background-image: linear-gradient( rgba(255, 255, 255, 1)80%, rgba(255, 255, 255, 0));
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        padding: 2rem 3rem;
+        p {
+            margin: 0;
+        }
+        div {
+            margin: 0;
+            padding: 0;
+            ul {
+                display: flex;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    margin-left: 2rem;
+                    cursor: pointer;
+                }
+            }
+        }
+        a {
+            color: black;
+        }
+        a,
+        a:hover,
+        a:active,
+        a:visited,
+        a:focus {
+            text-decoration: none;
+        }
+    }
+}

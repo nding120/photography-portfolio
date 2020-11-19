@@ -1,0 +1,18 @@
+{
+    "coverData": [{
+            "id": "cover001",
+            "name": "c1",
+            "source": "assets/img/po1.jpg"
+        },
+        {
+            "id": "cover002",
+            "name": "c2",
+            "source": "assets/img/land1.jpg"
+        },
+        {
+            "id": "cover003",
+            "name": "c3",
+            "source": "assets/img/life.JPG"
+        }
+    ]
+}

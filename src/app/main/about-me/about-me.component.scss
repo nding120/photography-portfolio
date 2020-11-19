@@ -1,0 +1,17 @@
+.container {
+    .row {
+        .right {
+            display: flex;
+            align-items: center;
+        }
+        p {
+            padding-top: 2rem;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+}

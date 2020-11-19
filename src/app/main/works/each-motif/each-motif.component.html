@@ -1,0 +1,47 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <img src="//placehold.it/500x300" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <img src="//placehold.it/500x300" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <img src="//placehold.it/500x300" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <img src="//placehold.it/300x300" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <img src="//placehold.it/600x300" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <img src="//placehold.it/500x300" class="img-fluid" alt="Responsive image">
+        </div>
+    </div>
+</div> -->
+<div class="wrap">
+    <!-- <table class="table">
+        <tbody class="container">
+            <tr class="row" id="masonary">
+                <td class="col-xs-12 col-sm-4" *ngFor="let item of portraitPicArr">
+                    <img src={{item.source}} class="img-fluid" alt="Responsive image">
+                </td>
+            </tr>
+        </tbody>
+    </table> -->
+    <div class="row" id="masonary">
+        <div *ngFor="let item of portraitPicArr">
+            <img style="width: 100vw;" src={{item.source}} class="img-fluid" alt="Responsive image">
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="previous" (click)="routemotif(0)">
+            <p>{{leftPage}}</p>
+        </div>
+
+        <div class="next" (click)="routemotif(1)">
+            <p>{{rightPage}}</p>
+        </div>
+    </footer>
+</div>

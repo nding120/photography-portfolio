@@ -1,0 +1,27 @@
+// .table {
+//     margin: 3rem;
+//     .container {
+//         .row {
+//             .col-sm-4 {
+//                 padding: 15px;
+//             }
+//         }
+//     }
+// }
+.wrap {
+    margin: 2rem;
+    .row {
+        margin: 1rem;
+    }
+    .footer {
+        display: flex;
+        justify-content: space-around;
+        // position: fixed;
+        bottom: 0;
+        // width: 100vw;
+    }
+}
+
+.img {
+    width: 100vw;
+}
