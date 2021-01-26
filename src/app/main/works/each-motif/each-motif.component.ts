@@ -1,11 +1,9 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { appStore } from '../../../shared/service/appStore.service';
 import { appCRUDservice } from '../../../shared/service/appCRUD.service';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
-
-declare const Macy: any;
 
 @Component({
   selector: 'app-each-motif',
@@ -24,7 +22,6 @@ export class EachMotifComponent implements OnInit, AfterViewInit {
   constructor(
     private router: Router,
     private activatRoute: ActivatedRoute,
-    private appStoreService: appStore,
     private appRequestService: appCRUDservice
   ) { }
 
@@ -50,32 +47,15 @@ export class EachMotifComponent implements OnInit, AfterViewInit {
         .subscribe((port) => {
           this.portraitPicArr = port.portraitData;
           console.log(this.portraitPicArr);
-        });
+          })
     });
-    // setTimeout(() => {
-      
-    // }, timeout);
-    
   }
+  
   ngAfterViewInit() {
-    Macy.init({
-      // See below for all available options.
-      container: '#masonary',
-      trueOrder: false,
-      waitForImages: false,
-      columns: 3,
-      margin: {
-        x: 20,
-        y: 20,
-      },
-      breakAt: {
-        1200: 3,
-        940: 3,
-        520: 2,
-        400: 1
-      }
-    });
+   
   }
+
+
   
   routemotif(value) {
     let routeId;

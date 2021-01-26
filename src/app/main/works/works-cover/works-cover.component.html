@@ -8,13 +8,13 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active" (click)="goToEachMotifPage(1)">
-                    <img src={{coverPicArr[0].source}} class="img-fluid" alt="Portrait Portal Image">
+                    <img src={{coverPicArr?coverPicArr[0].source:null}} class="img-fluid" alt="Portrait Portal Image">
                 </div>
                 <div class="carousel-item" (click)="goToEachMotifPage(2)">
-                    <img src={{coverPicArr[1].source}} class="img-fluid" alt="Landscape Portal Image">
+                    <img src={{coverPicArr?coverPicArr[1].source:null}} class="img-fluid" alt="Landscape Portal Image">
                 </div>
                 <div class="carousel-item" (click)="goToEachMotifPage(3)">
-                    <img src={{coverPicArr[2].source}} class="img-fluid" alt="Lifestyle Portal Image">
+                    <img src={{coverPicArr?coverPicArr[2].source:null}} class="img-fluid" alt="Lifestyle Portal Image">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
