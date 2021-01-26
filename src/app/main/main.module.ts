@@ -11,19 +11,24 @@ import { appStore } from '../shared/service/appStore.service';
 import { appHttpService } from '../shared/service/appHttp.service';
 import { appCRUDservice } from '../shared/service/appCRUD.service';
 
-
 @NgModule({
-  declarations: [MainComponent, NavBarComponent, ContactMeComponent, AboutMeComponent, WorksComponent],
-  imports: [
-    CommonModule,
-    MainRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  providers: [
-    // appStore,
-    // appHttpService,
-    // appCRUDservice
-  ]
+    declarations: [
+        MainComponent,
+        NavBarComponent,
+        ContactMeComponent,
+        AboutMeComponent,
+        WorksComponent,
+    ],
+    imports: [
+        CommonModule,
+        MainRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+    ],
+    providers: [
+        // appStore,
+        // appHttpService,
+        // appCRUDservice
+    ],
 })
-export class MainModule { }
+export class MainModule {}

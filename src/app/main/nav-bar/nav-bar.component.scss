@@ -4,7 +4,10 @@
     .navbar-box {
         display: flex;
         justify-content: space-between;
-        background-image: linear-gradient( rgba(255, 255, 255, 1)80%, rgba(255, 255, 255, 0));
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 1) 80%,
+            rgba(255, 255, 255, 0)
+        );
         position: fixed;
         top: 0;
         width: 100vw;

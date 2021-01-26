@@ -8,10 +8,9 @@ import { Subject } from 'rxjs';
 @Component({
   selector: 'app-each-motif',
   templateUrl: './each-motif.component.html',
-  styleUrls: ['./each-motif.component.scss']
+  styleUrls: ['./each-motif.component.scss'],
 })
 export class EachMotifComponent implements OnInit, AfterViewInit {
-
   leftPage = '';
   rightPage = '';
   // motifId = this.appStoreService.select('workMotifId').value;
@@ -47,16 +46,14 @@ export class EachMotifComponent implements OnInit, AfterViewInit {
         .subscribe((port) => {
           this.portraitPicArr = port.portraitData;
           console.log(this.portraitPicArr);
-          })
+        })
     });
   }
-  
+
   ngAfterViewInit() {
-   
+
   }
 
-
-  
   routemotif(value) {
     let routeId;
     if (value === 0) {
@@ -66,6 +63,5 @@ export class EachMotifComponent implements OnInit, AfterViewInit {
     }
     this.router.navigate(['/main/works/each-motif/' + routeId]);
   }
-
 
 }
