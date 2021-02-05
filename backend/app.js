@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 
 const imagesRoutes = require('./routes/images');
 const adminUserRoutes = require('./routes/adminUser');
+const sendEmailRoutes = require('./routes/sendEmail');
 
 const app = express();
 
@@ -41,6 +42,7 @@ app.use((req, res, next) => {
 
 app.use('/api/images', imagesRoutes);
 app.use('/api/admin-user', adminUserRoutes);
+app.use('/api/send-email', sendEmailRoutes);
 
 // app.use((req, res, next) => {
 //     res.send('express test');
