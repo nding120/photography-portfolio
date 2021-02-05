@@ -2,17 +2,17 @@
     "coverData": [{
             "id": "cover001",
             "name": "c1",
-            "source": "assets/img/po1.jpg"
+            "source": "assets/img/cover-port1.jpg"
         },
         {
             "id": "cover002",
             "name": "c2",
-            "source": "assets/img/land1.jpg"
+            "source": "assets/img/land-cover1.jpg"
         },
         {
             "id": "cover003",
             "name": "c3",
-            "source": "assets/img/life.JPG"
+            "source": "assets/img/life-cover1.jpg"
         }
     ]
 }

@@ -58,7 +58,7 @@ export class ManagePhotosComponent implements OnInit {
         const postData = new FormData();
         for (let i = 0; i < this.filesToUpload.length; i++) {
             postData.append('images', this.filesToUpload[i]);
-            postData.append('titles', 'landscape ' + i);
+            postData.append('titles', category + i);
             postData.append('descs', 'test ' + i);
         }
         this.http

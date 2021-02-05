@@ -9,11 +9,13 @@ import { Router } from '@angular/router';
 export class NavBarComponent implements OnInit {
     constructor(private router: Router) {}
 
+    isPopUp = false;
     ngOnInit(): void {
         console.log(123);
     }
 
     navigateTo(destination: string) {
         this.router.navigate([destination]);
+        this.isPopUp = false;
     }
 }

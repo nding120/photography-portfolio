@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { appHttpService } from './appHttp.service';
+import { environment } from '../../../environments/environment';
+
+const baseURL = environment.apiUrl;
 
 @Injectable({
     providedIn: 'root', //
@@ -7,9 +10,9 @@ import { appHttpService } from './appHttp.service';
 export class appCRUDservice {
     constructor(private appHttp: appHttpService) {}
 
-    getPortrait(motifId: string) {
+    getPhotos(imgCate: string) {
         // motifId: string
-        const url = 'assets/portrait.json';
+        const url = baseURL + '/images/' + imgCate;
         return this.appHttp.request('GET', url);
     }
 

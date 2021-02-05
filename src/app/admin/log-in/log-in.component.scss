@@ -1,0 +1,29 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    .row {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        .formWrap {
+            margin: auto 0;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            span {
+                display: inline-block;
+                width: 40%;
+                text-align: right;
+                padding: 8px;
+            }
+            input {
+                width: 60%;
+                text-align: left;
+            }
+            .invalideMessage {
+                color: red;
+            }
+        }
+    }
+}

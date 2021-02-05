@@ -1,60 +1,133 @@
-// .table {
-//     margin: 3rem;
-//     .container {
-//         .row {
-//             .col-sm-4 {
-//                 padding: 15px;
-//             }
-//         }
-//     }
-// }
-.wrap {
-    margin: 2rem;
-    .row {
-        margin: 1rem;
-        display: flex;
-        flex-flow: column wrap;
-        align-content: space-between;
-        height: 900px;
-        .fade-in {
-            opacity: 1;
-            transform: translate(0, 10vh);
-            transition: opacity 2s;
-            width: 32%;
-            .img {
-                width: 100vw;
+@media (min-width: 768px) and (max-width: 12450px) {
+    /* Styles */
+    .container {
+        .row {
+            // margin: 1rem;
+            display: flex;
+            flex-flow: column wrap;
+            align-content: space-between;
+            text-align: center;
+            height: 4500px;
+            .fade-in {
+                // opacity: 1;
+                transform: translate(0, 10vh);
+                // transition: all 1s;
+                width: 32%;
+                margin: 0.7rem 0;
+                // border-radius: 10px;
+                .img-fluid {
+                    width: 100vw;
+                    border-radius: 6px;
+                    box-shadow: 0 4px 4px rgb(0 0 0 /12%);
+                    animation: fadeIn ease 8s;
+                    -webkit-animation: fadeIn ease 8s;
+                    -moz-animation: fadeIn ease 8s;
+                    -o-animation: fadeIn ease 8s;
+                    -ms-animation: fadeIn ease 8s;
+                }
+                @keyframes fadeIn {
+                    0% {
+                        opacity: 0;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
+                }
+                @-moz-keyframes fadeIn {
+                    0% {
+                        opacity: 0;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
+                }
+                @-webkit-keyframes fadeIn {
+                    0% {
+                        opacity: 0;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
+                }
+                @-o-keyframes fadeIn {
+                    0% {
+                        opacity: 0;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
+                }
+                @-ms-keyframes fadeIn {
+                    0% {
+                        opacity: 0;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
+                }
+            }
+            .fade-in.visible {
+                opacity: 1;
+                transform: translate(0, 0);
             }
         }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translate(0, 0);
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            // position: fixed;
+            bottom: 0;
+            // width: 100vw;
+            div {
+                display: flex;
+                cursor: pointer;
+            }
+        }
+        .fade-in:nth-child(3n + 1) {
+            order: 1;
+        }
+        .fade-in:nth-child(3n + 2) {
+            order: 2;
+        }
+        .fade-in:nth-child(3n) {
+            order: 3;
+        }
+        .row::before,
+        .row::after {
+            content: '';
+            flex-basis: 100%;
+            width: 0;
+            order: 2;
         }
     }
-    .footer {
-        display: flex;
-        justify-content: space-around;
-        // position: fixed;
-        bottom: 0;
-        // width: 100vw;
+}
+
+@media (max-width: 768px) {
+    /* Styles */
+    .container {
+        .row {
+            margin: 1rem;
+            text-align: center;
+            .fade-in {
+                margin: 1rem;
+                border-radius: 10px;
+                box-shadow: 0 4px 4px rgb(0 0 0 /25%);
+                .img-fluid {
+                    width: 100vw;
+                    border-radius: 10px;
+                }
+            }
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            // position: fixed;
+            bottom: 0;
+            // width: 100%;
+            // left: 0; //sticky footer (above4lines)
+            div {
+                display: flex;
+                cursor: pointer;
+            }
+        }
     }
-}
-
-.fade-in:nth-child(3n+1) {
-    order: 1;
-}
-
-.fade-in:nth-child(3n+2) {
-    order: 2;
-}
-
-.fade-in:nth-child(3n) {
-    order: 3;
-}
-
-.row::before,
-.row::after {
-    content: "";
-    flex-basis: 100%;
-    width: 0;
-    order: 2;
 }

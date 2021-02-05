@@ -4,28 +4,90 @@
     .navbar-box {
         display: flex;
         justify-content: space-between;
-        background-image: linear-gradient(
-            rgba(255, 255, 255, 1) 80%,
-            rgba(255, 255, 255, 0)
-        );
+        background-image: linear-gradient( rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0));
         position: fixed;
         top: 0;
         width: 100vw;
         padding: 2rem 3rem;
-        p {
-            margin: 0;
+        .leftLogo {
+            img {
+                width: 350px;
+                height: 50px;
+            }
         }
-        div {
-            margin: 0;
-            padding: 0;
-            ul {
-                display: flex;
-                list-style-type: none;
-                margin: 0;
+        @media (min-width: 768px) and (max-width: 12450px) {
+            .rightListForPhone {
+                display: none;
+            }
+            .rightListForPC {
+                margin: auto 0;
                 padding: 0;
-                li {
-                    margin-left: 2rem;
-                    cursor: pointer;
+                ul {
+                    display: flex;
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        margin-left: 2rem;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        @media (max-width: 768px) {
+            .rightListForPC {
+                display: none;
+            }
+            .rightListForPhone {
+                display: block;
+                .rightNavDiv {
+                    .menuBtn {
+                        position: absolute;
+                        height: 27px;
+                        width: 27px;
+                        cursor: pointer;
+                        right: 6%;
+                        top: 45px;
+                    }
+                    .menuBtn span {
+                        position: absolute;
+                        height: 3px;
+                        width: 27px;
+                        background-color: black;
+                        transition: transform 0.2s;
+                    }
+                    .menuBtn span:nth-child(1) {
+                        top: 3px;
+                    }
+                    .menuBtn span:nth-child(2) {
+                        top: 15px;
+                    }
+                    .menuBtn.open span:nth-child(1) {
+                        transform: translateY(6px) rotate(45deg);
+                    }
+                    .menuBtn.open span:nth-child(2) {
+                        transform: translateY(-6px) rotate(-45deg);
+                    }
+                }
+                .dropdownMenu {
+                    display: flex;
+                    justify-content: center;
+                    top: 80px;
+                    bottom: 0;
+                    left: 0;
+                    position: fixed;
+                    width: 100%;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    ul {
+                        margin: auto 0;
+                        padding: 0;
+                        li {
+                            list-style-type: none;
+                            padding: 20px;
+                            text-align: center;
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
         }
