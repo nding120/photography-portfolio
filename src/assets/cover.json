@@ -2,17 +2,32 @@
     "coverData": [{
             "id": "cover001",
             "name": "c1",
-            "source": "assets/img/po1.jpg"
+            "source": "assets/img/cover-pc-p1.jpg"
         },
         {
             "id": "cover002",
             "name": "c2",
-            "source": "assets/img/land1.jpg"
+            "source": "assets/img/cover-pc-l1.jpg"
         },
         {
             "id": "cover003",
             "name": "c3",
-            "source": "assets/img/life.JPG"
+            "source": "assets/img/cover-pc-f1.jpg"
+        },
+        {
+            "id": "cover01",
+            "name": "c1-1",
+            "source": "assets/img/cover-p1.jpg"
+        },
+        {
+            "id": "cover02",
+            "name": "c2-2",
+            "source": "assets/img/cover-l1.jpg"
+        },
+        {
+            "id": "cover03",
+            "name": "c3-3",
+            "source": "assets/img/cover-f1.jpg"
         }
     ]
 }

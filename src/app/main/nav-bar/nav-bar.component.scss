@@ -1,43 +1,126 @@
 .navbar-wrapper {
     display: flex;
     justify-content: center;
-    .navbar-box {
-        display: flex;
-        justify-content: space-between;
-        background-image: linear-gradient(
-            rgba(255, 255, 255, 1) 80%,
-            rgba(255, 255, 255, 0)
-        );
-        position: fixed;
-        top: 0;
-        width: 100vw;
-        padding: 2rem 3rem;
-        p {
-            margin: 0;
-        }
-        div {
-            margin: 0;
-            padding: 0;
-            ul {
-                display: flex;
-                list-style-type: none;
-                margin: 0;
+    @media (min-width: 768px) and (max-width: 12450px) {
+        .navbar-box {
+            display: flex;
+            justify-content: space-between;
+            background-image: linear-gradient( rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0));
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            padding: 2rem 3rem;
+            .leftLogo {
+                img {
+                    width: 350px;
+                    height: auto;
+                }
+            }
+            .rightListForPhone {
+                display: none;
+            }
+            .rightListForPC {
+                margin: auto 0;
                 padding: 0;
-                li {
-                    margin-left: 2rem;
-                    cursor: pointer;
+                ul {
+                    display: flex;
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        margin-left: 2rem;
+                        cursor: pointer;
+                    }
                 }
             }
         }
-        a {
-            color: black;
+    }
+    @media (max-width: 767px) {
+        .navbar-box {
+            display: flex;
+            justify-content: space-between;
+            background-image: linear-gradient( rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0));
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            padding: 1rem 1rem;
+            .leftLogo {
+                img {
+                    width: 350px;
+                    height: auto;
+                }
+            }
+            .leftLogo {
+                img {
+                    width: 200px;
+                    height: auto;
+                }
+            }
+            .rightListForPC {
+                display: none;
+            }
+            .rightListForPhone {
+                display: block;
+                .rightNavDiv {
+                    .menuBtn {
+                        position: absolute;
+                        height: 27px;
+                        width: 27px;
+                        cursor: pointer;
+                        right: 5%;
+                        top: 1.5rem;
+                    }
+                    .menuBtn span {
+                        position: absolute;
+                        height: 3px;
+                        width: 27px;
+                        background-color: black;
+                        transition: transform 0.2s;
+                    }
+                    .menuBtn span:nth-child(1) {
+                        top: 3px;
+                    }
+                    .menuBtn span:nth-child(2) {
+                        top: 15px;
+                    }
+                    .menuBtn.open span:nth-child(1) {
+                        transform: translateY(6px) rotate(45deg);
+                    }
+                    .menuBtn.open span:nth-child(2) {
+                        transform: translateY(-6px) rotate(-45deg);
+                    }
+                }
+                .dropdownMenu {
+                    display: flex;
+                    justify-content: center;
+                    top: 50px;
+                    bottom: 0;
+                    left: 0;
+                    position: fixed;
+                    width: 100%;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    ul {
+                        margin: auto 0;
+                        padding: 0;
+                        li {
+                            list-style-type: none;
+                            padding: 20px;
+                            text-align: center;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
         }
-        a,
-        a:hover,
-        a:active,
-        a:visited,
-        a:focus {
-            text-decoration: none;
-        }
+    }
+    a {
+        color: black;
+    }
+    a,
+    a:hover,
+    a:active,
+    a:visited,
+    a:focus {
+        text-decoration: none;
     }
 }

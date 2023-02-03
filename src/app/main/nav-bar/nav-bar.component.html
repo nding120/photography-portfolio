@@ -1,12 +1,30 @@
 <div class="navbar-wrapper">
     <div class="navbar-box">
-        <p><a [routerLink]="['/main/works/workscover']">Ning Ding</a></p>
-        <div>
+        <div class="leftLogo">
+            <img src="assets/img/PSLOGO1.jpg" alt="DING Photography Logo" (click)="navigateTo('/main/works/workscover')">
+        </div>
+        <div class="rightListForPC">
             <ul>
-                <li><a (click)="navigateTo('/main/works')">WORKS</a></li>
+                <li><a [routerLink]="['/main/works']">WORKS</a></li>
                 <li><a [routerLink]="['/main/about']">ABOUT ME</a></li>
                 <li><a [routerLink]="['/main/contact']">CONTACT ME</a></li>
             </ul>
+        </div>
+        <div class="rightListForPhone">
+            <div class="rightNavDiv">
+                <a class="menuBtn" (click)="isPopUp = !isPopUp" [ngClass]="{'open':isPopUp}">
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div *ngIf="isPopUp" class="dropdownMenu">
+                <ul>
+                    <li><a (click)="navigateTo('/main/works')">WORKS</a></li>
+                    <li><a (click)="navigateTo('/main/about')">ABOUT ME</a></li>
+                    <li><a (click)="navigateTo('/main/contact')">CONTACT ME</a></li>
+                </ul>
+            </div>
+
         </div>
     </div>
 

@@ -70,7 +70,7 @@ exports.sendEmail = (req, res, next) => {
                 message: 'email sent failed!',
             });
         } else {
-            console.log(info.response);
+            console.log(req.body, info.response);
             res.status(201).json({
                 success: true,
                 message: 'email sent successfully!',
@@ -81,8 +81,7 @@ exports.sendEmail = (req, res, next) => {
 
 exports.sendEmailFromFakeAddress = (req, res, next) => {
     console.log(process.env.FAKE_EMAIL);
-    sendmail(
-        {
+    sendmail({
             from: process.env.FAKE_EMAIL,
             to: 'yh0324@sina.cn',
             subject: req.body.subject,
