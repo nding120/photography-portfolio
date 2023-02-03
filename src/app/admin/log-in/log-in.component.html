@@ -15,7 +15,7 @@
             </div>
             <label for="password"><span>Password</span><input name="password" [(ngModel)]="model.password"
                     #password="ngModel" [ngClass]="{'isinvalid':loginForm.submitted && password.invalid}" required
-                    type="text"></label>
+                    type="password"></label>
             <div *ngIf="loginForm.submitted && password.invalid" class="invalideMessage">
                 <div *ngif="password.errors?.required">
                     password is required

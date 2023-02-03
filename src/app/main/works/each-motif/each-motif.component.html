@@ -2,8 +2,7 @@
 
     <div class="row" id="masonry">
         <div *ngFor="let item of portraitPicArr" class="fade-in">
-            <p class="screen" *ngIf="isLoading">is loading...</p>
-            <img src={{item.path}} class="img-fluid" alt="Responsive image" (load)="fadeIn()">
+            <img src={{item.path}} class="img-fluid" alt="Responsive image">
         </div>
     </div>
     <footer class="footer">

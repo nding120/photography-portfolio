@@ -1,21 +1,21 @@
 .navbar-wrapper {
     display: flex;
     justify-content: center;
-    .navbar-box {
-        display: flex;
-        justify-content: space-between;
-        background-image: linear-gradient( rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0));
-        position: fixed;
-        top: 0;
-        width: 100vw;
-        padding: 2rem 3rem;
-        .leftLogo {
-            img {
-                width: 350px;
-                height: 50px;
+    @media (min-width: 768px) and (max-width: 12450px) {
+        .navbar-box {
+            display: flex;
+            justify-content: space-between;
+            background-image: linear-gradient( rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0));
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            padding: 2rem 3rem;
+            .leftLogo {
+                img {
+                    width: 350px;
+                    height: auto;
+                }
             }
-        }
-        @media (min-width: 768px) and (max-width: 12450px) {
             .rightListForPhone {
                 display: none;
             }
@@ -34,7 +34,28 @@
                 }
             }
         }
-        @media (max-width: 768px) {
+    }
+    @media (max-width: 767px) {
+        .navbar-box {
+            display: flex;
+            justify-content: space-between;
+            background-image: linear-gradient( rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0));
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            padding: 1rem 1rem;
+            .leftLogo {
+                img {
+                    width: 350px;
+                    height: auto;
+                }
+            }
+            .leftLogo {
+                img {
+                    width: 200px;
+                    height: auto;
+                }
+            }
             .rightListForPC {
                 display: none;
             }
@@ -46,8 +67,8 @@
                         height: 27px;
                         width: 27px;
                         cursor: pointer;
-                        right: 6%;
-                        top: 45px;
+                        right: 5%;
+                        top: 1.5rem;
                     }
                     .menuBtn span {
                         position: absolute;
@@ -72,7 +93,7 @@
                 .dropdownMenu {
                     display: flex;
                     justify-content: center;
-                    top: 80px;
+                    top: 50px;
                     bottom: 0;
                     left: 0;
                     position: fixed;
@@ -91,15 +112,15 @@
                 }
             }
         }
-        a {
-            color: black;
-        }
-        a,
-        a:hover,
-        a:active,
-        a:visited,
-        a:focus {
-            text-decoration: none;
-        }
+    }
+    a {
+        color: black;
+    }
+    a,
+    a:hover,
+    a:active,
+    a:visited,
+    a:focus {
+        text-decoration: none;
     }
 }

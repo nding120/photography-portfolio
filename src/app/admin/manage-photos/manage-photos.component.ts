@@ -62,13 +62,12 @@ export class ManagePhotosComponent implements OnInit {
             postData.append('descs', 'test ' + i);
         }
         this.http
-            .post(BACKEND_URL + '/images/' + category, postData)
+            .post(BACKEND_URL + 'images/' + category, postData)
             .subscribe((res: any) => {
                 this.filesToUpload = [];
                 this.imagesPreview = [];
                 this.form.reset();
                 this.imagesInput.nativeElement.value = '';
-                console.log(res);
             });
     }
 }

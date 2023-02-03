@@ -1,9 +1,7 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    // width: 100vw;
-    margin: 0 3rem;
-    // font-family: fantasy;
+    padding-bottom: 2rem;
     app-nav-bar {
         min-height: 4rem;
         z-index: 16;

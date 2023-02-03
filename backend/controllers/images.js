@@ -98,10 +98,10 @@ exports.getImg = (req, res, next) => {
                 res.status(200).json(formatImg(img));
             } else {
                 res,
-                status(404).json({
-                    message: 'Image not found!',
-                    success: false,
-                });
+                    status(404).json({
+                        message: 'Image not found!',
+                        success: false,
+                    });
             }
         })
         .catch((err) => {
@@ -245,12 +245,12 @@ function unlink(path) {
         if (err) {
             console.log(
                 'Image not found in directory! ' +
-                path.split('backend/images/')[1]
+                    path.split('backend/images/')[1]
             );
         } else {
             console.log(
                 'Image removed from directory! ' +
-                path.split('backend/images/')[1]
+                    path.split('backend/images/')[1]
             );
         }
     });

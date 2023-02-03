@@ -21,7 +21,7 @@ export class AuthService {
             adminInvitationCode: code,
         };
 
-        return this.http.post(this.BASE_URL + '/admin-user/signup', authData);
+        return this.http.post(this.BASE_URL + 'admin-user/signup', authData);
     }
 
     login(email: string, username: string, password: string) {
@@ -31,7 +31,7 @@ export class AuthService {
             password: password,
         };
         return this.http
-            .post(this.BASE_URL + '/admin-user/signin', authData)
+            .post(this.BASE_URL + 'admin-user/signin', authData)
             .pipe(tap((value) => (this.token = value['token'])));
     }
 

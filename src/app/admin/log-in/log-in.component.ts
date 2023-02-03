@@ -13,14 +13,12 @@ export class LogInComponent {
     constructor(private authService: AuthService, private router: Router) {}
 
     onLogin(form: NgForm) {
-        console.log(form.value, form.submitted, form.value.email);
         if (form.invalid) {
             return;
         }
         this.authService
             .login(form.value.email, form.value.username, form.value.password)
             .subscribe((rep) => {
-                console.log(rep);
                 this.router.navigate(['/admin']);
             });
     }

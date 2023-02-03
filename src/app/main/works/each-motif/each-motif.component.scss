@@ -7,7 +7,7 @@
             flex-flow: column wrap;
             align-content: space-between;
             text-align: center;
-            height: 4500px;
+            height: 4400px;
             .fade-in {
                 // opacity: 1;
                 transform: translate(0, 10vh);
@@ -19,11 +19,11 @@
                     width: 100vw;
                     border-radius: 6px;
                     box-shadow: 0 4px 4px rgb(0 0 0 /12%);
-                    animation: fadeIn ease 8s;
-                    -webkit-animation: fadeIn ease 8s;
-                    -moz-animation: fadeIn ease 8s;
-                    -o-animation: fadeIn ease 8s;
-                    -ms-animation: fadeIn ease 8s;
+                    animation: fadeIn ease 4s;
+                    -webkit-animation: fadeIn ease 4s;
+                    -moz-animation: fadeIn ease 4s;
+                    -o-animation: fadeIn ease 4s;
+                    -ms-animation: fadeIn ease 4s;
                 }
                 @keyframes fadeIn {
                     0% {
@@ -80,6 +80,7 @@
             div {
                 display: flex;
                 cursor: pointer;
+                font-size: 25px;
             }
         }
         .fade-in:nth-child(3n + 1) {
@@ -101,11 +102,11 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     /* Styles */
     .container {
         .row {
-            margin: 1rem;
+            margin: 1rem auto;
             text-align: center;
             .fade-in {
                 margin: 1rem;
@@ -120,13 +121,11 @@
         .footer {
             display: flex;
             justify-content: space-around;
-            // position: fixed;
             bottom: 0;
-            // width: 100%;
-            // left: 0; //sticky footer (above4lines)
             div {
                 display: flex;
                 cursor: pointer;
+                font-size: 25px;
             }
         }
     }

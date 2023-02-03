@@ -10,12 +10,10 @@ const sendEmailRoutes = require('./routes/sendEmail');
 const app = express();
 
 mongoose
-    .connect(
-        'mongodb+srv://HanYang:' +
-            process.env.MONGO_ATLAS_PW +
-            '@cluster0-f5gmq.mongodb.net/rest?retryWrites=true&w=majority',
-        { useNewUrlParser: true, useUnifiedTopology: true }
-    )
+    .connect(process.env.MONGO_ATLAS, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    })
     .then(() => {
         console.log('Connected to database!');
     })
@@ -25,7 +23,7 @@ mongoose
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use('/images', express.static(path.join('backend/images')));
+app.use('/images', express.static(path.join(path.join(__dirname, './images'))));
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -43,9 +41,5 @@ app.use((req, res, next) => {
 app.use('/api/images', imagesRoutes);
 app.use('/api/admin-user', adminUserRoutes);
 app.use('/api/send-email', sendEmailRoutes);
-
-// app.use((req, res, next) => {
-//     res.send('express test');
-// });
 
 module.exports = app;

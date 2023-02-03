@@ -23,12 +23,10 @@ const routes: Routes = [
             {
                 path: 'about',
                 component: AboutMeComponent,
-                // loadChildren: () => import('./about-me/about-me.component').then(m => m.AboutMeComponent)
             },
             {
                 path: 'contact',
                 component: ContactMeComponent,
-                // loadChildren: () => import('./contact-me/contact-me.component').then(m => m.ContactMeComponent)
             },
         ],
     },

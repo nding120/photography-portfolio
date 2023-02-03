@@ -14,7 +14,6 @@ export class SignUpComponent {
     constructor(private authService: AuthService, private router: Router) {}
 
     onSignup(form: NgForm) {
-        console.log(form.value);
         if (form.invalid) {
             return;
         }
@@ -26,8 +25,7 @@ export class SignUpComponent {
                 form.value.code
             )
             .subscribe((rep) => {
-                console.log(rep);
-                this.router.navigate(['/admin']);
+                this.router.navigate(['/login']);
             });
     }
 }

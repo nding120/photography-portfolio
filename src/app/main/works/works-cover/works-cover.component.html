@@ -8,13 +8,16 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active" (click)="goToEachMotifPage('portrait')">
-                    <img src={{coverPicArr?coverPicArr[0].source:null}} class="img-fluid" alt="Portrait Portal Image">
+                    <img *ngIf="windowWidth>=768" src={{coverPicArr?coverPicArr[0].source:null}} class="img-fluid" alt="Portrait Portal Image">
+                    <img *ngIf="windowWidth<768" src={{coverPicArr?coverPicArr[3].source:null}} class="img-fluid" alt="Portrait Portal Image">
                 </div>
                 <div class="carousel-item" (click)="goToEachMotifPage('landscape')">
-                    <img src={{coverPicArr?coverPicArr[1].source:null}} class="img-fluid" alt="Landscape Portal Image">
+                    <img *ngIf="windowWidth>=768" src={{coverPicArr?coverPicArr[1].source:null}} class="img-fluid" alt="Landscape Portal Image">
+                    <img *ngIf="windowWidth<768" src={{coverPicArr?coverPicArr[4].source:null}} class="img-fluid" alt="Portrait Portal Image">
                 </div>
                 <div class="carousel-item" (click)="goToEachMotifPage('life')">
-                    <img src={{coverPicArr?coverPicArr[2].source:null}} class="img-fluid" alt="Lifestyle Portal Image">
+                    <img *ngIf="windowWidth>=768" src={{coverPicArr?coverPicArr[2].source:null}} class="img-fluid" alt="Lifestyle Portal Image">
+                    <img *ngIf="windowWidth<768" src={{coverPicArr?coverPicArr[5].source:null}} class="img-fluid" alt="Portrait Portal Image">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

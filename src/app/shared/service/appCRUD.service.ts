@@ -12,7 +12,7 @@ export class appCRUDservice {
 
     getPhotos(imgCate: string) {
         // motifId: string
-        const url = baseURL + '/images/' + imgCate;
+        const url = baseURL + 'images/' + imgCate;
         return this.appHttp.request('GET', url);
     }
 
@@ -21,8 +21,8 @@ export class appCRUDservice {
         return this.appHttp.request('GET', coverUrl);
     }
 
-    postContactReq(obj) {
-        const postUrl = '';
-        return this.appHttp.request('POST', postUrl, obj);
+    postContactReq(body: any) {
+        const postUrl = baseURL + 'send-email';
+        return this.appHttp.request('POST', postUrl, { body });
     }
 }
