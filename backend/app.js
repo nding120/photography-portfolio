@@ -13,7 +13,7 @@ mongoose
     .connect(
         'mongodb+srv://HanYang:' +
             process.env.MONGO_ATLAS_PW +
-            '@cluster0-f5gmq.mongodb.net/rest?retryWrites=true&w=majority',
+            '@cluster0.f5gmq.mongodb.net/rest?retryWrites=true&w=majority',
         { useNewUrlParser: true, useUnifiedTopology: true }
     )
     .then(() => {

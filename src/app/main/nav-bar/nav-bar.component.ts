@@ -9,9 +9,7 @@ import { Router } from '@angular/router';
 export class NavBarComponent implements OnInit {
     constructor(private router: Router) {}
 
-    ngOnInit(): void {
-        console.log(123);
-    }
+    ngOnInit(): void {}
 
     navigateTo(destination: string) {
         this.router.navigate([destination]);
