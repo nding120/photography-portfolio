@@ -1,14 +1,14 @@
 {
-  "env": {
-    "MONGO_ATLAS_PW": "Yh19940324",
-    "ADMIN_INVITATION_CODE": "Niangkou33!",
-    "JWT_KEY": "Daisyding0120_Hankyang0324",
-    "CLIENT_NAME": "dingphotography120@gmail.com",
-    "CLIENT_PW": "Niangkou33!",
-    "CLIENT_ID": "398582075315-1aji90oqkoj85uuuosgi7n214iug1pvq.apps.googleusercontent.com",
-    "CLIENT_SECRET": "hZAiL_4DLXjr3Ypp4ASpoMSV",
-    "CLIENT_REFRESH_TOKEN": "1//04_bKqNPsRRzHCgYIARAAGAQSNwF-L9Irfv-jJ4-fpx-Q0jRL9OMapjuPfZ7HP3NHTxG5zHOTrldDFSC2-jfEsjemncImasi3T9g",
-    "EMAIL_TO": "nding120@gmail.com",
-    "FAKE_EMAIL": "no-reply@DingPhotography.com"
-  }
+    "env": {
+        "MONGO_ATLAS": "mongodb+srv://HanYang:Yh19940324@cluster0-f5gmq.mongodb.net/rest?retryWrites=true&w=majority",
+        "ADMIN_INVITATION_CODE": "Niangkou33!",
+        "JWT_KEY": "Daisyding0120_Hankyang0324",
+        "CLIENT_NAME": "dingphotography120@gmail.com",
+        "CLIENT_PW": "Niangkou33!",
+        "CLIENT_ID": "398582075315-1aji90oqkoj85uuuosgi7n214iug1pvq.apps.googleusercontent.com",
+        "CLIENT_SECRET": "hZAiL_4DLXjr3Ypp4ASpoMSV",
+        "CLIENT_REFRESH_TOKEN": "1//04QKbJDJS1fDKCgYIARAAGAQSNwF-L9IrcKHsTmo_CFYI7pQMtbcCefQ0QXJUtfDk6eaRYflh8XkbUEUYtyGursjH20mXT8d_gHI",
+        "EMAIL_TO": "nding120@gmail.com",
+        "FAKE_EMAIL": "no-reply@DingPhotography.com"
+    }
 }

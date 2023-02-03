@@ -17,17 +17,13 @@
                 "build": {
                     "builder": "@angular-builders/custom-webpack:browser",
                     "options": {
-                        "customWebpackConfig": {
-                            "path": "./extra-webpack.config.js",
-                            "replaceDuplicatePlugins": true
-                        },
                         "outputPath": "dist/photography-portfolio",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
                         "tsConfig": "tsconfig.app.json",
                         "aot": true,
-                        "assets": ["src/favicon.ico", "src/assets"],
+                        "assets": ["src/camera.png", "src/assets"],
                         "styles": ["src/styles.scss"],
                         "scripts": [
                             "./node_modules/jquery/dist/jquery.min.js",
@@ -91,7 +87,7 @@
                         "polyfills": "src/polyfills.ts",
                         "tsConfig": "tsconfig.spec.json",
                         "karmaConfig": "karma.conf.js",
-                        "assets": ["src/favicon.ico", "src/assets"],
+                        "assets": ["src/camera.png", "src/assets"],
                         "styles": ["src/styles.scss"],
                         "scripts": [
                             "./node_modules/jquery/dist/jquery.min.js",

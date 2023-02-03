@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const AdminUser = require('../models/adminUser');
@@ -69,8 +69,7 @@ exports.adminSignIn = (req, res, next) => {
                     });
                 }
 
-                const token = jwt.sign(
-                    { email: adminUser.email, id: adminUser._id },
+                const token = jwt.sign({ email: adminUser.email, id: adminUser._id },
                     process.env.JWT_KEY
                 );
                 return res.status(200).json({
@@ -142,8 +141,7 @@ exports.deleteAdminUser = (req, res, next) => {
             if (result.n > 0) {
                 return res.status(200).json({
                     success: true,
-                    message:
-                        'Deleting admin user successful! ' + req.userData.email,
+                    message: 'Deleting admin user successful! ' + req.userData.email,
                 });
             } else {
                 return res
@@ -170,8 +168,7 @@ function updateAdminUserInfo(user, updates, res) {
     AdminUser.updateOne({ _id: user._id, email: user.email }, updatedAdminUser)
         .then((result) => {
             if (result.n > 0) {
-                const token = jwt.sign(
-                    {
+                const token = jwt.sign({
                         email: updates.email ? updates.email : user.email,
                         id: user._id,
                     },
@@ -181,10 +178,9 @@ function updateAdminUserInfo(user, updates, res) {
                 return res.status(200).json({
                     success: true,
                     token: token,
-                    message:
-                        'Updating admin user successful! ' + updates.email
-                            ? updates.email
-                            : user.email,
+                    message: 'Updating admin user successful! ' + updates.email ?
+                        updates.email :
+                        user.email,
                 });
             } else {
                 return res

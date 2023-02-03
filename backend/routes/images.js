@@ -7,7 +7,7 @@ const checkAuth = require('../middleware/check-auth');
 
 const router = express.Router();
 
-router.post('/:cat', checkCat, extractFile, ImgController.createImgs);
+router.post('/:cat', checkAuth, checkCat, extractFile, ImgController.createImgs);
 router.post(
     '/:cat/delete-some',
     checkAuth,

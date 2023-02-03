@@ -1,5 +1,30 @@
 .container {
     .row {
+        div {
+            top: 40px;
+            padding-top: 1rem;
+        }
+        .left {
+            .socialList {
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    li {
+                        list-style-type: none;
+                        height: 30px;
+                        width: 30px;
+                        margin-top: 2rem;
+                        img {
+                            height: 30px;
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+        }
         .right {
             display: flex;
             align-items: center;

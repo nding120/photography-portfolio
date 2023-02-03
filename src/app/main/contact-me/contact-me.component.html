@@ -5,34 +5,37 @@
 
             <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6">
+                    <div class="col-sm-12 col-md-6">
                         <label for="firstName">First Name *
                             <input type="text" name="firstName" formControlName="firstName">
                         </label>
                         <div *ngIf="submit && !contactForm.get('firstName').valid" class="validation">
                             <ng-container *ngIf="contactForm.get('firstName').errors.required">Required</ng-container>
-                            <ng-container *ngIf="contactForm.get('firstName').errors.pattern">Invalid Charactor</ng-container>
+                            <ng-container *ngIf="contactForm.get('firstName').errors.pattern">Invalid Charactor
+                            </ng-container>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6">
+                    <div class="col-sm-12 col-md-6">
                         <label for="lastName">Last Name *
                             <input type="text" name="lastName" formControlName="lastName">
                         </label>
                         <div *ngIf="submit && !contactForm.get('lastName').valid" class="validation">
                             <ng-container *ngIf="contactForm.get('lastName').errors.required">Required</ng-container>
-                            <ng-container *ngIf="contactForm.get('lastName').errors.pattern">Invalid Charactor</ng-container>
+                            <ng-container *ngIf="contactForm.get('lastName').errors.pattern">Invalid Charactor
+                            </ng-container>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12">
+                    <div class="col-sm-12 col-md-12">
                         <label for="email">Email *
                             <input type="text" name="email" formControlName="email">
                         </label>
                         <div *ngIf="submit && !contactForm.get('email').valid" class="validation">
                             <ng-container *ngIf="contactForm.get('email').errors.required">Required</ng-container>
-                            <ng-container *ngIf="contactForm.get('email').errors.pattern">Invalid Charactor</ng-container>
+                            <ng-container *ngIf="contactForm.get('email').errors.email">Invalid Charactor
+                            </ng-container>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12">
+                    <div class="col-sm-12 col-md-12">
                         <label for="subject">Subject *
                             <select name="subject" id="subject" formControlName="subject">
                                 <option *ngFor="let option of subjectList" [value]=option>{{option}}</option>
@@ -42,9 +45,10 @@
                             <ng-container *ngIf="contactForm.get('subject').errors.required">Required</ng-container>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12">
+                    <div class="col-sm-12 col-md-12">
                         <label for="message">Message *
-                            <textarea name="message" formControlName="message" maxlength="500" cols="30" rows="5"></textarea>
+                            <textarea name="message" formControlName="message" maxlength="500" cols="30" rows="5"
+                                placeholder="Please leave your detail request and contact information here"></textarea>
                             <p class="count">{{countMessageLetter}} characters remaining</p>
                         </label>
                         <div *ngIf="submit && !contactForm.get('message').valid" class="validation">

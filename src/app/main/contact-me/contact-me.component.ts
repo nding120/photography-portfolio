@@ -8,6 +8,7 @@ import {
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { appCRUDservice } from '../../shared/service/appCRUD.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-contact-me',
@@ -34,7 +35,8 @@ export class ContactMeComponent implements OnInit, OnDestroy {
     unSubscribeAll = new Subject();
     constructor(
         private fb: FormBuilder,
-        private appRequestService: appCRUDservice
+        private appRequestService: appCRUDservice,
+        private router: Router
     ) {}
 
     ngOnInit(): void {
@@ -74,19 +76,21 @@ export class ContactMeComponent implements OnInit, OnDestroy {
         if (!this.contactForm.valid && this.submit) {
             return;
         }
-        console.log(this.contactForm.valid);
         /*** send a post to service， 后端需要链接一个邮箱，直接发到邮箱里
          */
         const sendForm = {
             firstName: this.contactForm.value.firstName,
             lastName: this.contactForm.value.lastName,
             email: this.contactForm.value.email,
-            requstType: this.contactForm.value.subject,
-            note: this.contactForm.value.message,
+            subject: this.contactForm.value.subject,
+            message: this.contactForm.value.message,
         };
         this.appRequestService
             .postContactReq(sendForm)
             .pipe(takeUntil(this.unSubscribeAll))
-            .subscribe();
+            .subscribe(() => {
+                alert('Request sent successfully!');
+                this.router.navigate(['/main/works/workscover']);
+            });
     }
 }
