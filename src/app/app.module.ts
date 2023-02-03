@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // import { MainModule } from './main/main.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { AuthInterceptor } from './admin/auth-interceptor';
 import { ErrorInterceptor } from './error-interceptor';
 
 @NgModule({
@@ -18,7 +17,6 @@ import { ErrorInterceptor } from './error-interceptor';
     ],
     exports: [],
     providers: [
-        { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     ],
     bootstrap: [AppComponent],

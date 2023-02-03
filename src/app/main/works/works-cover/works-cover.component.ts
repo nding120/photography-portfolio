@@ -10,7 +10,7 @@ import { takeUntil } from 'rxjs/operators';
     templateUrl: './works-cover.component.html',
     styleUrls: ['./works-cover.component.scss'],
 })
-export class WorksCoverComponent implements OnInit, OnDestroy {
+export class WorksCoverComponent implements OnInit {
     coverPicArr;
     private unSubscribeAll = new Subject();
     windowWidth = document.documentElement.offsetWidth;
