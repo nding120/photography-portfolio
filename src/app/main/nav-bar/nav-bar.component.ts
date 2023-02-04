@@ -15,4 +15,8 @@ export class NavBarComponent {
         this.router.navigate([destination]);
         this.isPopUp = false;
     }
+
+    onClick() {
+        this.isPopUp = !this.isPopUp;
+    }
 }

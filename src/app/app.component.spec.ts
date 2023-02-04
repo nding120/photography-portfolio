@@ -23,6 +23,13 @@ describe('AppComponent', () => {
         expect(app.title).toEqual('photography-portfolio');
     });
 
+    it('should call the carousel function', () => {
+        const fixture = TestBed.createComponent(AppComponent);
+        spyOn($.fn, 'carousel');
+        fixture.detectChanges();
+        expect($.fn.carousel).toHaveBeenCalled();
+    });
+
     // it('should render title', () => {
     //     const fixture = TestBed.createComponent(AppComponent);
     //     fixture.detectChanges();

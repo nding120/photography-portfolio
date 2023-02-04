@@ -33,7 +33,7 @@ export class WorksCoverComponent implements OnInit {
     //   this.router.navigate([destination]);
     // }
     goToEachMotifPage(itemID) {
-        const id = itemID ? itemID : null;
+        const id = itemID;
         this.router.navigate(['/main/works/each-motif', id]);
         this.appStoreService.set('workMotifId', itemID);
     }

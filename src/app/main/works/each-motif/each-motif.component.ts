@@ -46,6 +46,7 @@ export class EachMotifComponent implements OnInit {
         });
     }
     start = 1;
+
     rec(event) {
         this.start = event.value;
     }

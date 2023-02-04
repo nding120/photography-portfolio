@@ -7,9 +7,6 @@ import { WorksComponent } from './works/works.component';
 import { MainComponent } from './main.component';
 import { MainRoutingModule } from './main-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { appStore } from '../shared/service/appStore.service';
-import { appHttpService } from '../shared/service/appHttp.service';
-import { appCRUDservice } from '../shared/service/appCRUD.service';
 
 @NgModule({
     declarations: [
