@@ -1,4 +1,5 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async, ComponentFixture } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 declare var $: any;
@@ -17,6 +18,13 @@ describe('AppComponent', () => {
         expect(app).toBeTruthy();
     });
 
+    it('should render the router outlet', () => {
+        const fixture = TestBed.createComponent(AppComponent);
+        const { debugElement } = fixture;
+        const router = debugElement.query(By.css('router-outlet'));
+        expect(router).toBeTruthy();
+    });
+
     it(`should have as title 'photography-portfolio'`, () => {
         const fixture = TestBed.createComponent(AppComponent);
         const app = fixture.componentInstance;
@@ -29,13 +37,4 @@ describe('AppComponent', () => {
         fixture.detectChanges();
         expect($.fn.carousel).toHaveBeenCalled();
     });
-
-    // it('should render title', () => {
-    //     const fixture = TestBed.createComponent(AppComponent);
-    //     fixture.detectChanges();
-    //     const compiled = fixture.nativeElement;
-    //     expect(compiled.querySelector('.content span').textContent).toContain(
-    //         'photography-portfolio app is running!'
-    //     );
-    // });
 });

@@ -47,7 +47,15 @@ describe('appCRUDservice', () => {
             expect(data).toEqual(testData);
             expect(appHttpServiceMock.request).toHaveBeenCalledWith(
                 'GET',
-                environment.apiUrl + 'images/test-category'
+                'assets/test-category.json'
+            );
+        });
+
+        service.getPhotos('life').subscribe((data) => {
+            expect(data).toEqual(testData);
+            expect(appHttpServiceMock.request).toHaveBeenCalledWith(
+                'GET',
+                'assets/lifestyle.json'
             );
         });
     });

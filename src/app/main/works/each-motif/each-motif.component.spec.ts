@@ -54,12 +54,12 @@ describe('EachMotifComponent', () => {
         expect(component).toBeTruthy();
     });
 
-    it('ngOnInit should set motifID to value from paramMap', () => {
+    it('should set motifID to value from paramMap', () => {
         component.ngOnInit();
         expect(component.motifID).toEqual('portrait');
     });
 
-    it('ngOnInit should set motifID to value from a different paramMap', () => {
+    it('should set motifID to value from a different paramMap', () => {
         route.push({ id: 'life' });
         component.ngOnInit();
         expect(component.motifID).toEqual('life');
@@ -71,18 +71,18 @@ describe('EachMotifComponent', () => {
     //     expect(component.motifID).toEqual('landscape');
     // });
 
-    it('ngOnInit should set leftPage and rightPage correctly', () => {
+    it('should set leftPage and rightPage correctly', () => {
         component.ngOnInit();
         expect(component.leftPage).toEqual('');
         expect(component.rightPage).toEqual('landscape');
     });
 
-    it('ngOnInit should call getPhotos of appCRUDservice with motifID as argument', () => {
+    it('should call getPhotos of appCRUDservice with motifID as argument', () => {
         component.ngOnInit();
         expect(appCRUDserviceStub.getPhotos).toHaveBeenCalledWith('portrait');
     });
 
-    it('routemotif should navigate to correct URL', () => {
+    it('should navigate to correct URL', () => {
         const router = TestBed.inject(Router);
         spyOn(router, 'navigate');
         component.routemotif('landscape');
@@ -91,7 +91,7 @@ describe('EachMotifComponent', () => {
         ]);
     });
 
-    it('rec should set start to event.value', () => {
+    it('should set start to event.value when rec', () => {
         component.rec({ value: 10 });
         expect(component.start).toEqual(10);
     });

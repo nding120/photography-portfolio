@@ -21,4 +21,10 @@ describe('AboutMeComponent', () => {
     it('should create', () => {
         expect(component).toBeTruthy();
     });
+
+    it('should open a link in a new tab', () => {
+        const linkElement =
+            fixture.debugElement.nativeElement.querySelector('a');
+        expect(linkElement.target).toEqual('_blank');
+    });
 });

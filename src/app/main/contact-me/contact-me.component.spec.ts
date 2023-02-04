@@ -64,15 +64,20 @@ describe('ContactMeComponent', () => {
         expect(component).toBeTruthy();
     });
 
-    it('should call postContactReq on submit', () => {
+    it('should show message after submit', () => {
+        spyOn(window, 'alert');
         component.onSubmit();
-        expect(spy).toHaveBeenCalled();
+        expect(window.alert).toHaveBeenCalledWith(
+            'Request has been sent! Thank you!'
+        );
     });
 
     it('should not call postContactReq on submit if form is invalid', () => {
         component.contactForm.controls.firstName.setValue('');
         component.onSubmit();
-        expect(spy).not.toHaveBeenCalled();
+        expect(spy).not.toHaveBeenCalledWith(
+            'Request has been sent! Thank you!'
+        );
     });
 
     it('should update countMessageLetter on value changes', () => {
@@ -82,6 +87,7 @@ describe('ContactMeComponent', () => {
         fixture.whenStable().then(() => {
             expect(component.countMessageLetter).toEqual(496);
         });
+        expect(component.countMessageLetter).toEqual(496);
     });
 
     it('should call complete on unSubscribeAll', () => {
