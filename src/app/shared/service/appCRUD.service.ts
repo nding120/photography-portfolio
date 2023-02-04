@@ -11,8 +11,8 @@ export class appCRUDservice {
     constructor(private appHttp: appHttpService) {}
 
     getPhotos(imgCate: string) {
-        // motifId: string
-        const url = baseURL + 'images/' + imgCate;
+        const url = imgCate === 'life' ? `assets/lifestyle.json` : `assets/${imgCate}.json`;
+        // console.log(url);
         return this.appHttp.request('GET', url);
     }
 

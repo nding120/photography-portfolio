@@ -41,7 +41,7 @@ export class EachMotifComponent implements OnInit {
                 .pipe(takeUntil(this.unsubscribeAll))
                 .subscribe((port) => {
                     window.scrollTo(0, 0);
-                    this.portraitPicArr = port;
+                    this.portraitPicArr = port?.results;
                 });
         });
     }

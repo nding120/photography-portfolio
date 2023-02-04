@@ -78,19 +78,21 @@ export class ContactMeComponent implements OnInit, OnDestroy {
         }
         /*** send a post to service， 后端需要链接一个邮箱，直接发到邮箱里
          */
-        const sendForm = {
-            firstName: this.contactForm.value.firstName,
-            lastName: this.contactForm.value.lastName,
-            email: this.contactForm.value.email,
-            subject: this.contactForm.value.subject,
-            message: this.contactForm.value.message,
-        };
-        this.appRequestService
-            .postContactReq(sendForm)
-            .pipe(takeUntil(this.unSubscribeAll))
-            .subscribe(() => {
-                alert('Request sent successfully!');
-                this.router.navigate(['/main/works/workscover']);
-            });
+        // const sendForm = {
+        //     firstName: this.contactForm.value.firstName,
+        //     lastName: this.contactForm.value.lastName,
+        //     email: this.contactForm.value.email,
+        //     subject: this.contactForm.value.subject,
+        //     message: this.contactForm.value.message,
+        // };
+        // this.appRequestService
+        //     .postContactReq(sendForm)
+        //     .pipe(takeUntil(this.unSubscribeAll))
+        //     .subscribe(() => {
+        //         alert('Request sent successfully!');
+        //         this.router.navigate(['/main/works/workscover']);
+        //     });
+        alert('Request has been sent! Thank you!');
+        this.router.navigate(['/main/works/workscover']);
     }
 }
