@@ -21,7 +21,8 @@
                     },
                     "builder": "@angular-builders/custom-webpack:browser",
                     "options": {
-                        "outputPath": "dist/photography-portfolio",
+                        "outputPath": "docs",
+                        "baseHref": "https://nding120.github.io/photography-portfolio/",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
